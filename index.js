@@ -1,7 +1,6 @@
 var geoddb = require("./db/geoddb")
 var tableManager = require("./db/config")
 
-
 function InitDefaultConfigGeoTable(TBL_NAME) {
 	var config = tableManager(TBL_NAME)
 	client = new geoddb(config)
@@ -29,7 +28,7 @@ function InitDefaultConfigGeoTable(TBL_NAME) {
 module.exports = {
 	geoddb: require('./db/geoddb'),
 	gapi: require('./gapi/gapi'),
-	util: require("./util")
+	util: require("./util/utility")
 }
 module.exports.geoddb = this.geoddb
 module.exports.gapi = this.gapi
