@@ -22,15 +22,16 @@ function InitDefaultConfigGeoTable(TBL_NAME) {
 	.catch(err => {
 		console.log("Unexpected error", err) }
 	)
-
 	return client
 }
 
 
 module.exports = {
 	geoddb: require('./db/geoddb'),
-	gapi: require('./gapi/gapi')
+	gapi: require('./gapi/gapi'),
+	util: require("./util")
 }
 module.exports.geoddb = this.geoddb
 module.exports.gapi = this.gapi
+module.exports.util = this.util
 module.exports.InitDefaultConfigGeoTable = InitDefaultConfigGeoTable
