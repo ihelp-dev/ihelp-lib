@@ -1,0 +1,23 @@
+{
+  "name": "ihelp-lib",
+  "version": "1.0.0",
+  "description": "Ihelp library utils",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihelp-dev/ihelp-lib.git"
+  },
+  "author": "Covid Ihelp <covid.ihelp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihelp-dev/ihelp-lib/issues"
+  },
+  "homepage": "https://github.com/ihelp-dev/ihelp-lib#readme",
+  "dependencies": {
+    "dynamodb-marshaler": "^2.0.0"
+  }
+}
