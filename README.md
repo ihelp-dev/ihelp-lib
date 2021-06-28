@@ -11,9 +11,14 @@
   git push --tag
 
 
-# Usage 
-  npm install github:ihelp-dev/ihelp-lib #Should create entry "ihelp-lib": "github:ihelp-dev/ihelp-lib"
-  
+# Usage
+  Add ihelp-lib to dependencies:
+   "dependencies": {
+      "ihelp-lib": "git+https://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:x-oauth-basic@github.com/ihelp-dev/ihelp-lib.git",
+      ....
+   }
+   //Make sure package-lock.json is reflecting https instead of ssh(there might be multple entries of ihelp-lib in package-lock)
+
   const ilib = require("ihelp-lib")
   # Work with geoddb
   var client = ilib.InitDefaultConfigGeoTable("TABLE_NAME")
