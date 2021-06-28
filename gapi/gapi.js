@@ -3,8 +3,6 @@ const axios = require("axios");
 const PLACES_API = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
 const DISTANCE_API = "https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&departure_time=now"
-
-
 const err = require("../util/error")
 
 function checkStatus(response) {

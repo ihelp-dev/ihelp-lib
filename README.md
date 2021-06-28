@@ -12,12 +12,17 @@
 
 
 # Usage 
-  npm install -S ihelp-dev/ihelp-lib #Should create entry "ihelp-lib": "github:ihelp-dev/ihelp-lib"
-  var ilib = require("ihelp-lib")
-
-# Api
+  npm install github:ihelp-dev/ihelp-lib #Should create entry "ihelp-lib": "github:ihelp-dev/ihelp-lib"
+  
+  const ilib = require("ihelp-lib")
   # Work with geoddb
-  ilib.InitDefaultConfigGeoTable("TABLE_NAME")
-  .then()
+  var client = ilib.InitDefaultConfigGeoTable("TABLE_NAME")
+  client.ListTables()
+
+  # Work with google api
+  ilib.gapi.getDistanceBetweenLatLong(...)
+
+  # Utilities
+  ilib.util.getApi("trymeapi")
 
 
