@@ -66,7 +66,7 @@ function getUniqueKey(lat, long) {
 }
 
 ///Public APIs:
-GeoDdbClient.prototype.TableExists = async function TableExists() {
+GeoDdbClient.prototype.TableExists = function TableExists() {
     const params = { TableName: this.config.tableName };
     return new Promise((resolve, reject) => {
         this.ddb.describeTable(params, function (err, data) {
