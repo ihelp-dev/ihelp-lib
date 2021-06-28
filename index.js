@@ -2,11 +2,9 @@ var geoddb = require("./db/geoddb")
 var tableManager = require("./db/config")
 
 
-function InitDefaultConfigGeoTable(TBL_NAME) {
-	let client
+async function InitDefaultConfigGeoTable(TBL_NAME) {
 	var config = tableManager(TBL_NAME)
 	client = new geoddb(config)
-
 	if (!(await client.TableExists())) {
 		console.log('Table doesnt exist creating new table')
 		await client.CreateTable()
@@ -16,7 +14,7 @@ function InitDefaultConfigGeoTable(TBL_NAME) {
 	return client
 }
 
-InitDefaultConfigGeoTable(TST1)
+InitDefaultConfigGeoTable("TST1")
 module.exports = {
 	geoddb: require('./db/geoddb'),
 	gapi: require('./gapi/gapi')

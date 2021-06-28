@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const _geoddb = require('dynamodb-geo');
 const geoDdbPort = process.env.GEO_DDB_PORT || 3005;
-const creds = require('../../creds.json')
+const creds = require('../creds.json')
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 function TableManager(tableName) {
